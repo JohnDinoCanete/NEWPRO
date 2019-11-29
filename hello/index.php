@@ -13,7 +13,7 @@
             <p>Username</p>
             <input type="text" name="username" placeholder="Enter Username" required>
             <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password" required>
+            <input type="password" name="password" placeholder="Enter Password"required >
             <input type="submit" name="login_user" value="Login">
             <a href="register.php">Sign up</a>    
             </form>
@@ -26,10 +26,10 @@
 <?php 
 session_start();
 if(isset($_SESSION['username'])){
-    header("location:main.php");
+    header("location:index.php");
 }
 include_once ('config.php');
-if(isset($_POST['login'])){
+if(isset($_POST['login_user'])){
    $susername = $_POST['username'];
    $spassword = $_POST['password'];
    $sql = "select * from mydatabase.tusers where username = :username && password = :pass";
@@ -44,7 +44,7 @@ if(isset($_POST['login'])){
     if($result > 0){
         $_SESSION['username'] = $susername;
         $_SESSION['nickname'] = $nickname;
-        header("location:main.php");
+        header("location:index.php");
     }
     else
     {

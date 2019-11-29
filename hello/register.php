@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="reg.css">
   <style type="text/css">
   body{
-	background-image: url(reg.jpg);
+	background-image: url(sea.jpg);
 	background-attachment:fixed;
 	background-size:cover;
    
